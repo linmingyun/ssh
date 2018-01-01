@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default">
+    	<action name="index">
+    		<result>/index.jsp</result>
+    	</action>
+    	<action name="struts">
+    		<result>/struts.jsp</result>
+    	</action>
+    	<action name="eclipse">
+    		<result>/eclipse.jsp</result>
+    	</action>
+		<action name="legendsAction" class="com.heimu.action.LegendsAction">
+			<result>/HelloWorld.jsp</result>
+		</action>
+		<action name="lottery" class="com.heimu.action.LegendsAction" method="lottery">
+			<result>/lottery.jsp</result>
+		</action>
+    </package>
+
+    
+    <package name="struts" namespace="/struts" extends="struts-default">
+    	<action name="namespace">
+    		<result>/struts/namespace.jsp</result>
+    	</action>
+    	<action name="result">
+    		<result>/struts/result.jsp</result>
+    	</action>
+    	<action name="package">
+    		<result>/struts/package.jsp</result>
+    	</action>
+    	<action name="action">
+    		<result>/struts/action.jsp</result>
+    	</action>
+    	<action name="path">
+    		<result>/struts/path.jsp</result>
+    	</action>
+    </package>
+    
+    <package name="eclipse" namespace="/eclipse" extends="struts-default">
+    	<action name="copy">
+    		<result>/eclipse/copy.jsp</result>
+    	</action>
+    	<action name="jsp">
+    		<result>/eclipse/jsp.jsp</result>
+    	</action>
+    </package>
+</struts>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSHE:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SSHE-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SSHE:war exploded" />
+    </root>
+  </artifact>
+</component>
